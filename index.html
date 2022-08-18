@@ -1,0 +1,20 @@
+<title>Suikoden V party generator</title>
+
+<meta charset='utf8'>
+<link rel='stylesheet' href='style.css'>
+
+<a id='guide' target='_blank' href='https://suikoden.fandom.com/wiki/Recruitment_(Suikoden_V)'>Recruitment guide</a>
+<h4>Party priority:</h4>
+<ol id='party'></ol>
+
+<script type='module'>
+  import * as star from './star.js'
+
+  star.setup()
+  let party=document.querySelector('#party')
+  for(let s of star.party){
+    let i=document.createElement('li')
+    i.textContent=s
+    party.appendChild(i)
+  }
+</script>
